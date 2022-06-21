@@ -2,6 +2,7 @@
     import LogoutNavigator from "../components/LogoutNavigator.svelte";
     import TitleBar from "../components/TitleBar.svelte";
     import PoiMap from "../components/PoiMap.svelte";
+    import PoiForm from "../components/PoiForm.svelte";
 
 </script>
 
@@ -15,3 +16,4 @@
 </div>
 
 <PoiMap/>
+<PoiForm/>

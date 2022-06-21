@@ -39,4 +39,20 @@ export class PlacemarkService {
             return false;
         }
     }
+    async addPoi(namePoi,category,description,longitude,latitude){
+        try {
+            const poiDetails = {
+                    name: namePoi,
+                    category: category,
+                    description: description,
+                    img: "",
+                    latitude: latitude,
+                    longitude: longitude,
+            };
+            await axios.post(this.baseUrl+ "/api/pois", poiDetails);
+            return true;
+        } catch (error) {
+            return false;
+        }
+    }
 }
