@@ -15,9 +15,10 @@
     "/signup": Signup,
     "/logout": Main,
     "/dashboard": Dashboard,
+    "/close": Dashboard,
   }
 </script>
 
 <div className="container">
-  <Router {routes}/>
+  <Router {routes} />
 </div>

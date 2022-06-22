@@ -25,6 +25,7 @@
             errorMessage = "Invalid Credentials";
         }
     }
+
 </script>
 <div class="box" id="poi-map" style="height:800px; width:800px; margin: auto">
 <h1 class="title" style="color:darkgreen;font-size:30px;text-align:center;">Add New Poi</h1>
