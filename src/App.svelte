@@ -6,6 +6,7 @@
   import Signup from "./pages/Signup.svelte"
   import Router from "svelte-spa-router";
   import Dashboard from "./pages/Dashboard.svelte";
+  import Charts from "./pages/Charts.svelte";
 
   setContext("PlacemarkService", new PlacemarkService("http://localhost:3000"));
 
@@ -16,6 +17,7 @@
     "/logout": Main,
     "/dashboard": Dashboard,
     "/close": Dashboard,
+    "/charts": Charts,
   }
 </script>
 
