@@ -3,6 +3,8 @@
     import TitleBar from "../components/TitleBar.svelte";
     import PoiMap from "../components/PoiMap.svelte";
     import PoiForm from "../components/PoiForm.svelte";
+    import OstravaMap from "../components/OstravaMap.svelte";
+    import TransportMap from "../components/TransportMap.svelte";
 
 </script>
 
@@ -14,6 +16,9 @@
         <LogoutNavigator/>
     </div>
 </div>
+    <PoiMap/>
+    <OstravaMap/>
+<TransportMap/>
 
-<PoiMap/>
+
 <PoiForm/>

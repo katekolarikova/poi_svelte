@@ -1,6 +1,6 @@
 <script>
     import 'leaflet/dist/leaflet.css';
-    import {LeafletMap} from '../service/leaflet-map';
+    import {LeafletMapWithPois} from '../service/leaflet-map';
     import {getContext, onMount} from "svelte";
 
     const placemarkService = getContext("PlacemarkService");
@@ -14,7 +14,7 @@
     let map = null;
 
     onMount(async () => {
-        map = new LeafletMap("poi-map", mapConfig);
+        map = new LeafletMapWithPois("poi-map", mapConfig);
        // var map = new L.map('map', mapConfig);
         map.showZoomControl();
         map.addLayerGroup("Poi");
