@@ -2,7 +2,6 @@
     import LogoutNavigator from "../components/LogoutNavigator.svelte";
     import TitleBar from "../components/TitleBar.svelte";
     import PoiMap from "../components/PoiMap.svelte";
-    import PoiForm from "../components/PoiForm.svelte";
     import OstravaMap from "../components/OstravaMap.svelte";
     import TransportMap from "../components/TransportMap.svelte";
 
@@ -16,9 +15,13 @@
         <LogoutNavigator/>
     </div>
 </div>
+<div class="box">
     <PoiMap/>
+</div>
+<div class="box">
     <OstravaMap/>
-<TransportMap/>
+</div>
+<div class="box">
+    <TransportMap/>
+</div>
 
-
-<PoiForm/>

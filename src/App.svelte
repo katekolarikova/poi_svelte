@@ -7,6 +7,8 @@
   import Router from "svelte-spa-router";
   import Dashboard from "./pages/Dashboard.svelte";
   import Charts from "./pages/Charts.svelte";
+  import DashboardClose from "./pages/DashboardClose.svelte";
+  import ImageGalery from "./pages/ImageGalery.svelte";
 
   setContext("PlacemarkService", new PlacemarkService("http://localhost:3000"));
 
@@ -16,8 +18,9 @@
     "/signup": Signup,
     "/logout": Main,
     "/dashboard": Dashboard,
-    "/close": Dashboard,
+    "/dashboard/close": DashboardClose,
     "/charts": Charts,
+    "/galery":ImageGalery,
   }
 </script>
 
