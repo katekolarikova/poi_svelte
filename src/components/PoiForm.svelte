@@ -1,6 +1,8 @@
 <script>
     import {push} from "svelte-spa-router";
     import {getContext} from "svelte";
+    // import * as cloudinary from "cloudinary";
+    //import {writeFileSync} from "fs";
 
     let name = ""
     let category = "";
@@ -9,11 +11,14 @@
     let longitude=0.0;
     let errorMessage = "";
 
-
     const placemarkService = getContext("PlacemarkService");
 
     async function addPoi() {
-        let success = await placemarkService.addPoi(name, category,description,longitude,latitude)
+        const dataArray = new FormData();
+        dataArray.append("img", file);
+
+        let success = await placemarkService.addPoi(name, category,description,longitude,latitude, files)
+
         if (success) {
             push("/dashboard");
         } else {
@@ -25,6 +30,9 @@
             errorMessage = "Invalid Credentials";
         }
     }
+
+    let files = []
+    $: file = files[0]
 
 </script>
 <div class="box" id="poi-map" style="height:800px; width:800px; margin: auto">
@@ -65,11 +73,10 @@
         <label class="label" for="longitude"> Longitude</label>
         <input class="input" bind:value={longitude} id ="longitude" type="text" placeholder="Enter poi longitude" name="longitude">
     </div>
-    <label class="label"> Picture</label>
+    <label class="label" for="image"> Picture</label>
     <div id="file-select" class="file has-name is-fullwidth">
-
         <label class="file-label">
-            <input class="file-input" name="imagefile" type="file" accept="image/png, image/jpeg image/jpg" >
+            <input  id= "image" type="file" bind:files accept="image/*" multiple>
             <span class="file-cta">
             <span class="file-icon">
               <i class="fas fa-upload"></i>

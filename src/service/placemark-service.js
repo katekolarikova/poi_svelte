@@ -1,5 +1,8 @@
 import axios from "axios";
 import {user} from "../stores";
+//import {writeFileSync} from "fs";
+//import * as cloudinary from "cloudinary";
+
 
 export class PlacemarkService {
     baseUrl = "";
@@ -60,13 +63,15 @@ export class PlacemarkService {
             return false;
         }
     }
-    async addPoi(namePoi,category,description,longitude,latitude){
+    async addPoi(namePoi,category,description,longitude,latitude, images){
         try {
+            //await writeFileSync("./public/temp.img", images[0]);
+            //const response = await cloudinary.v2.uploader.upload("./public/temp.img");
             const poiDetails = {
                     name: namePoi,
                     category: category,
                     description: description,
-                    img: "",
+                    img: images,
                     latitude: latitude,
                     longitude: longitude,
             };
