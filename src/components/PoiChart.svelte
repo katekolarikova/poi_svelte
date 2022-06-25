@@ -75,9 +75,11 @@
 
 
 
-<h1 class="title is-4" style="font-size: 40px">Poi Accoring to Categories</h1>
+<h1 class="title is-4" style="font-size: 40px">Categories of Pois</h1>
 <form on:submit|preventDefault={changeType}>
-
+    <div>
+        <p style="font-size: 20px"> On the graph below you can see how many pois are available in every category. And do not hesitate to change the graph type to the one you like the most!</p>
+    </div>
     <div class="control">
         {#each graphType as type}
             <input bind:group={selectedType} class="radio" type="radio" style="width: 20px; height: 20px; margin: 10px" value="{type}"> <i style="font-size: 25px">  {type}     </i>

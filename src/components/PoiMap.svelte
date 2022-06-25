@@ -38,5 +38,14 @@
 
 </script>
 
-<div class="box" id="poi-map" style="height:800px; width:800px; margin: auto">
+<div >
+    <h1 style="text-align:center; font-size: 60px"><b> Map of Pois </b></h1>
+    <p style="text-align: center; font-size: 20px; margin-bottom: 30px">
+        Welcome in one of the most unique city of Europe! Ostrava has a lot of monument from the industrial and mining era, which you can't
+        find anywhere else. But it is not just about it... Look on the map below and discover what evrything you can see...
+    </p>
+    <div class="box" id="poi-map" style="height:800px; width:800px; margin: auto">
+    </div>
+
 </div>
+
