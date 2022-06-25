@@ -90,4 +90,8 @@ export class PlacemarkService {
             return [];
         }
     }
+
+    async logout() {
+        axios.defaults.headers.common["Authorization"] = "";
+    }
 }
