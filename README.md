@@ -1,4 +1,4 @@
-# Placemark  - Poinst of Interest of Ostrava
+# Placemark  - Points of Interest of Ostrava
 
 This application was developed for a course Advanced Full Stack Development at OTH.<br><br>
 Author: Katerina Kolarikova <br>
